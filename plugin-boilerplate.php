@@ -3,7 +3,7 @@
  * Plugin Name: Plugin Boilerplate
  * Description: A ready plugin boilerplate to reduce your development time.
  * Plugin URI: https://github.com/beyond88/plugin-boilerplate
- * Author: Getonnet
+ * Author: Mohiuddin Abdul kader
  * Author URI: hhttps://github.com/beyond88/
  * Version: 1.0.0
  * Text Domain:       plugin-boilerplate
@@ -17,8 +17,6 @@
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
-
-use Plugin_Boilerplate\Admin\WooCommerce;
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -86,16 +84,16 @@ final class PluginBoilerplate {
      * @return void
      */
     public function init_plugin() {
-        new Plugin_Boilerplate\Assets();
+        new PluginBoilerplate\Assets();
 
         if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
-            new Plugin_Boilerplate\Ajax();
+            new PluginBoilerplate\Ajax();
         }
 
-        new Plugin_Boilerplate\Admin();
-        new Plugin_Boilerplate\Frontend();
+        new PluginBoilerplate\Admin();
+        new PluginBoilerplate\Frontend();
 
-        new Plugin_Boilerplate\API();
+        new PluginBoilerplate\API();
     }
 
     /**
@@ -104,7 +102,7 @@ final class PluginBoilerplate {
      * @return void
      */
     public function activate() {
-        $installer = new Plugin_Boilerplate\Installer();
+        $installer = new PluginBoilerplate\Installer();
         $installer->run();
     }
 }

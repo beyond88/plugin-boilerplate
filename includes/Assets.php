@@ -52,10 +52,6 @@ class Assets {
                 'src'     => PLUGINBOILERPLATE_ASSETS . '/css/admin.css',
                 'version' => filemtime( PLUGINBOILERPLATE_PATH . '/assets/css/admin.css' )
             ],
-            'plugin-boilerplate-daterangepicker' => [
-                'src'     => PLUGINBOILERPLATE_ASSETS . '/css/daterangepicker.css',
-                'version' => filemtime( PLUGINBOILERPLATE_PATH . '/assets/css/daterangepicker.css' )
-            ],
         ];
     }
 
