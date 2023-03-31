@@ -1,0 +1,21 @@
+{
+  "name": "beyond/plugin-boilerplate",
+  "description": "WordPress plugin",
+  "type": "wordpress-plugin",
+  "require": {
+    "guzzlehttp/guzzle": "7.5.x-dev"
+  },
+  "license": "GPLv2",
+  "autoload": {
+    "psr-4": {
+      "PluginBoilerplate\\": "includes/"
+    }
+  },
+  "authors": [
+    {
+      "name": "beyond88",
+      "email": "muhin.cse.diu@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
