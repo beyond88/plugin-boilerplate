@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Plugin Boilerplate
- * Description: A ready plugin boilerplate to reduce your development time.
+ * Description: A ready-made plugin boilerplate to reduce your development time.
  * Plugin URI: https://github.com/beyond88/plugin-boilerplate
  * Author: Mohiuddin Abdul kader
  * Author URI: hhttps://github.com/beyond88/
