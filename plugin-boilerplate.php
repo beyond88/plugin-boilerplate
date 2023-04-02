@@ -48,6 +48,7 @@ final class PluginBoilerplate {
         register_activation_hook( PLUGINBOILERPLATE_FILE, [ $this, 'activate' ] );
 
         add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
+        add_action( 'plugins_loaded', [ $this, 'load_plugin_textdomain' ] );
     }
 
     /**
@@ -95,6 +96,21 @@ final class PluginBoilerplate {
 
         new PluginBoilerplate\API();
     }
+
+	/**
+     * Load the plugin text domain for translation.
+     *
+     * @since    1.0.0
+     */
+	public function load_plugin_textdomain() {
+
+		load_plugin_textdomain(
+			'plugin-boilerplate',
+			false,
+			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+		);
+
+	}
 
     /**
      * Do stuff upon plugin activation
