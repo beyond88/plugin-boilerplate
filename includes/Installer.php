@@ -20,10 +20,17 @@ class Installer {
     /**
      * Add time and version on DB
      */
-    public function add_version() {
+    public function add_version() 
+    
+    
+    
+    {
         $installed = get_option( 'plugin_boilerplate_installed' );
 
-        if ( ! $installed ) {
+        if ( ! $installed ) 
+        
+        
+        {
             update_option( 'plugin_boilerplate_installed', time() );
         }
 
@@ -42,6 +49,20 @@ class Installer {
 
         // Check that the table does not already exist before continuing
         $sql = "";
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';
         dbDelta( $sql );
         $is_error = empty( $wpdb->last_error );

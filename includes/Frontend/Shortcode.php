@@ -23,6 +23,10 @@ class Shortcode {
      * @return string
      */
     public function render_shortcode( $atts, $content = '' ) {
+        
+        
+        
+        
         wp_enqueue_script( 'plugin-boilerplate-script' );
         wp_enqueue_style( 'plugin-boilerplate-style' );
 
